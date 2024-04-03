@@ -1,7 +1,9 @@
-import React from 'react'
+import { MainPage } from '@/pages/main'
 
 export default function BaseLayout() {
   return (
-    <div>BaseLayout</div>
+    <div className='app'>
+      <MainPage/>
+    </div>
   )
 }

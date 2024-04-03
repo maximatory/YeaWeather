@@ -1,0 +1,14 @@
+.wrapper {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title {
+    margin-bottom: 20px;
+}
