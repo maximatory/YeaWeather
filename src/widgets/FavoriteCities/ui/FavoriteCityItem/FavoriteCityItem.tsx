@@ -7,10 +7,10 @@ export interface FavoriteCityItemProps {
 }
 
 export default function FavoriteCityItem({city}:FavoriteCityItemProps) {
-    const {data} = useGetWeatherQuery(city)
+    const {data, isError} = useGetWeatherQuery(city)
   return (
     <div className={styles.wrapper}>
-        <FavoriteCity city={city} data={data}/>
+        <FavoriteCity city={city} data={data} isError={isError}/>
     </div>
   )
 }

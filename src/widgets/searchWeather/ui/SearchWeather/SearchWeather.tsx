@@ -17,7 +17,7 @@ export default function SearchWeather() {
     const { search } = useAppSelector(state => state.search)
     const dispatch = useAppDispatch()
     const handleSearch = (value: string) => dispatch(setSearch(value))
-    const { data } = useGetWeatherQuery(search)
+    const { data, isError } = useGetWeatherQuery(search)
     useHistory({ data, search })
 
     return (
@@ -28,6 +28,10 @@ export default function SearchWeather() {
                     <Button label='История поиска' />
                 </Link>
             </div>
+            {
+                isError && 
+                <div>Пожалуйста введите корректный город</div>
+            }
             {data &&
                 <div className={styles.weather_container}>
                     <WetaherCard data={data} />
