@@ -6,7 +6,7 @@ interface FilterProps {
 }
 
 export default function Filter({ handleFilter }: FilterProps) {
-    const handleSubmit = (e) => {
+    const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
     }
 
