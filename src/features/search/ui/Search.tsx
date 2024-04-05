@@ -3,16 +3,16 @@ import Input from '@/shared/ui/input/Input'
 import styles from './styles.module.css'
 
 interface SearchProps {
-  setSearch : (search: string) => void
+  handleSearch : (search: string) => void
 }
 
-export default function Search({setSearch}:SearchProps) {
+export default function Search({handleSearch}:SearchProps) {
 const [inputValue, setInputValue] = useState('')
 const handleChange = (val:string)=> setInputValue(val)
 
 const fetchWeather = (e) => {
     e.preventDefault()
-    setSearch(inputValue)
+    handleSearch(inputValue)
     setInputValue('')
 }
 
