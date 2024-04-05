@@ -45,3 +45,10 @@
 .value {
     color: var(--gray-100);
 }
+
+@media (max-width: 900px) {
+    .details {
+        width: 100%;
+        max-width: none;
+    }
+}

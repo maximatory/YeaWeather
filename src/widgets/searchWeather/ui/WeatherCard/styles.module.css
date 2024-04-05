@@ -39,3 +39,26 @@
     top: calc(50% - 100px);
     left: calc(50% - 100px);
 }
+
+@media (max-width: 900px) {
+    .wrapper {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .wrapper {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 550px) {
+    .footer_img {
+        width: 100px;
+        height: 100px;
+        top: calc(50% - 50px);
+        left: calc(50% - 50px);
+    }
+}
