@@ -10,7 +10,7 @@ export default function Search({handleSearch}:SearchProps) {
 const [inputValue, setInputValue] = useState('')
 const handleChange = (val:string)=> setInputValue(val)
 
-const fetchWeather = (e) => {
+const fetchWeather = (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     handleSearch(inputValue)
     setInputValue('')
