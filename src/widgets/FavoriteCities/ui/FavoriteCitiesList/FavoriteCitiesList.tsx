@@ -1,4 +1,3 @@
-import React from 'react'
 import { favoriteCities } from '@/shared/constants/favoriteCities'
 import FavoriteCityItem from '../FavoriteCityItem/FavoriteCityItem'
 import styles from './styles.module.css'

@@ -1,0 +1,16 @@
+.button {
+    display: inline-block;
+    border: none;
+    min-width: 105px;
+    height: 56px;
+    padding: 0 10px;
+    background-color: var(--gray-600);
+    color: var(--gray-300);
+    border-radius: 8px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.button:hover {
+    border: 1px solid var(--blue-light);
+}

@@ -18,7 +18,7 @@ const fetchWeather = (e) => {
 
   return (
     <form onSubmit={fetchWeather} className={styles.search_form}>
-        <Input handleChange={handleChange} value={inputValue}/>
+        <Input handleChange={handleChange} value={inputValue} placeholder='Ведите название города'/>
     </form>
   )
 }

@@ -7,10 +7,14 @@ export interface FavoriteCityProps {
 }
 
 export default function FavoriteCity({city, data}: FavoriteCityProps) {
+  const pathToIcon = `https://openweathermap.org/img/wn/${data?.weather[0].icon}.png`
   return (
     <div className={styles.wrapper}>
-        <span>{city}</span>
-        <span>{data && Math.floor(data.main.temp) + " °C"}</span>
+        <div className={styles.left_wrapper}>
+          <img className={styles.icon} src={pathToIcon} alt="weather-icon" />
+          <span>{city}</span>
+        </div>
+        <span className={styles.value}>{data && Math.floor(data.main.temp) + " °C"}</span>
     </div>
   )
 }

@@ -1,7 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit"
+import type { PayloadAction } from "@reduxjs/toolkit";
+import { IHistory } from "./types"
 
 export interface State {
-    history: string[]
+  history: IHistory[] | []
 }
 
 const initialState: State = {
@@ -12,7 +14,7 @@ export const historySlice = createSlice({
   name: 'history',
   initialState,
   reducers: {
-    setHistory: (state, action) => {
+    setHistory: (state, action: PayloadAction<IHistory>) => {
       state.history = [...state.history, action.payload]
     },
   },

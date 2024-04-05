@@ -1,0 +1,4 @@
+.list_empty {
+    color: var(--gray-200);
+    padding: 5px 0;
+}

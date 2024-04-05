@@ -6,3 +6,4 @@ export const rootReducer = combineReducers({
     history: historyReducer,
     [weatherApi.reducerPath]: weatherApi.reducer
 })
+

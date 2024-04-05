@@ -1,4 +1,5 @@
 .wrapper {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,10 +9,10 @@
     font-size: var(--text-sm);
 }
 
-.left_wrapper {
+.content {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 }
 
 .value {

@@ -1,14 +1,21 @@
 .wrapper {
-    width: 60%;
+    width: 100%;
+    max-width: 1000px;
     margin: 0 auto;
+    background-color: var(--gray-800);
+    border-radius: 12px;
+    padding: 30px;
 }
 
 .list {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 10px;
 }
 
 .title {
     margin-bottom: 20px;
+    font-size: var(--heading-sm);
+    color: var(--gray-100);
 }

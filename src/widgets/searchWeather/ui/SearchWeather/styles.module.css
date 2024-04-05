@@ -9,6 +9,12 @@
     margin-bottom: 30px;
 }
 
+.search {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
 .weather_container {
     display: flex;
     gap: 20px;

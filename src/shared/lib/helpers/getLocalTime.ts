@@ -9,7 +9,7 @@ export const getLocalTime = (timezone:number | TimezoneType) => {
         const utc = localTime + localOffset
         const city = timezone > 0 ? utc + (1000 * + timezone) : utc + (1000 * - Math.abs(timezone))
         const result = new Date(city)
-        return `${result.getHours()}:${result.getMinutes()}`
+        return result.toLocaleTimeString().slice(0, -3)
     }
     return
 }
