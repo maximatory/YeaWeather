@@ -1,10 +1,10 @@
 import { useGetWeatherQuery } from '@/entities/weather/api/weatherApi'
 import { Search } from '@/features/search'
-import Button from '@/shared/ui/button/Button';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import useHistory from '@/shared/lib/hooks/useHistory';
 import WeatherContent from '../WeatherContent/WeatherContent';
 import styles from './styles.module.css'
+import LinkButton from '@/features/search/ui/LinkButton/LinkButton';
 
 export default function SearchWeather() {
     const {location} = useParams()
@@ -17,9 +17,7 @@ export default function SearchWeather() {
         <div className={styles.wrapper}>
             <div className={styles.search}>
                 <Search handleSearch={handleSearch} />
-                <Link to={"/history"}>
-                    <Button label='История поиска' />
-                </Link>
+                <LinkButton label='История поиска' link='history'/>
             </div>
             {isError && <div>Пожалуйста введите корректный город</div>}
             {data && <WeatherContent data={data}/>}
