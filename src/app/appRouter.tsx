@@ -5,11 +5,17 @@ import HistoryPage from "@/pages/history/ui/Page";
 
 export const AppRouter = createBrowserRouter([
     {
-        element: <BaseLayout/>,
+        element: <BaseLayout />,
         errorElement: <div>Error</div>,
         children: [
-            {path: '/', element: <MainPage/>},
-            {path: '/history', element: <HistoryPage/>}
+            {
+                path: '/',
+                element: <MainPage />,
+                children: [
+                    { path: '/:location', element: <MainPage /> }
+                ]
+            },
+            { path: '/history', element: <HistoryPage /> }
         ]
     },
-  ]);
+]);

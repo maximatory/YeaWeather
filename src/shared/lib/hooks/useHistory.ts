@@ -6,10 +6,9 @@ import getCurrentDate from "../helpers/getCurrentDate"
 
 export interface UseHistoryProps {
     data: WeatherApiResponse | undefined
-    search: string
 }
 
-export default function useHistory({ data, search }:UseHistoryProps) {
+export default function useHistory({ data }:UseHistoryProps) {
     const dispatch = useAppDispatch()
     
     useEffect(() => {

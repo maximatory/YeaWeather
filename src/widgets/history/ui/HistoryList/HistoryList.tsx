@@ -1,7 +1,5 @@
 import { HistoryItem } from '@/entities/weather'
 import styles from './styles.module.css'
-import { useAppDispatch } from '@/app/appStore'
-import { setSearch } from '@/entities/search/model/searchSlice'
 import { useNavigate } from 'react-router-dom'
 import { IHistory } from '@/entities/weather/model/types'
 
@@ -10,12 +8,8 @@ export interface HistoryListProps {
 }
 
 export default function HistoryList({history}:HistoryListProps) {
-    const dispatch = useAppDispatch()
     const navigate = useNavigate()
-    const setLocation = (location:string) => {
-        dispatch(setSearch(location))
-        navigate('/')
-    }
+    const setLocation = (location:string) => navigate(`/${location}`)
 
     return (
         <ul>
