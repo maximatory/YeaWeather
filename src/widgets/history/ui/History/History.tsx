@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useAppSelector } from '@/app/appStore'
 import HistoryList from '../HistoryList/HistoryList'
 import Filter from '@/features/filter/ui/Filter'
@@ -9,19 +9,18 @@ import styles from './styles.module.css'
 
 export default function History() {
     const { history } = useAppSelector(state => state.history)
-    const [search, setSearch] = useState('')
     const [filteredHistory, setFilteredHistory] = useState(history)
-    
-    useEffect(()=>{
-        if (!search) setFilteredHistory(history)
-        const filteredItems = history.filter(({location})=> location.toLowerCase().includes(search.toLowerCase()))
-        setFilteredHistory(filteredItems)
-    }, [search])
 
+    const filterHistory = (inputValue:string) => {
+        if(!inputValue) return setFilteredHistory(history)
+        const filteredItems = history.filter((historyItem)=> historyItem.location.toLowerCase().includes(inputValue.toLowerCase()))
+        setFilteredHistory(filteredItems)
+    }
+    
     return (
         <div>
             <div className={styles.filter_wrapper}>
-                <Filter handleFilter={(val)=> setSearch(val)} />
+                <Filter handleFilter={filterHistory} />
                 <Link to={"/"}>
                     <Button label='На главную' />
                 </Link>
