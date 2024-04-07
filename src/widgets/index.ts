@@ -1,3 +1,3 @@
-import FavoriteCitiesList from "./FavoriteCities/ui/FavoriteCitiesList/FavoriteCitiesList";
+import FavoriteCitiesList from "./favoriteCities/ui/FavoriteCitiesList/FavoriteCitiesList";
 
 export {FavoriteCitiesList as FavoriteCities}

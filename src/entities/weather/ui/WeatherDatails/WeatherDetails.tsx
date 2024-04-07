@@ -1,5 +1,6 @@
+import { WeatherApiResponse } from '../../model/types'
 import styles from './styles.module.css'
-import { WeatherApiResponse } from '@/entities/weather/model/types'
+
 
 interface WetaherDetailsProps {
     data: WeatherApiResponse
