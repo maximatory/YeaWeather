@@ -1,10 +1,9 @@
-import React from 'react'
-import { HistoryItem } from '@/entities/history'
-import { IHistory } from '@/entities/history/model/types'
+import { HistoryItem } from '@/entities/weather'
 import styles from './styles.module.css'
 import { useAppDispatch } from '@/app/appStore'
 import { setSearch } from '@/entities/search/model/searchSlice'
 import { useNavigate } from 'react-router-dom'
+import { IHistory } from '@/entities/weather/model/types'
 
 export interface HistoryListProps {
     history: IHistory[]

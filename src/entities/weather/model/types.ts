@@ -59,3 +59,10 @@ export interface WeatherApiResponse {
     sunrise: number
     sunset: number
   }
+
+  export interface IHistory {
+    location: string
+    date: string
+    weatherConditions: string
+    iconPath: string
+  }

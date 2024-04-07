@@ -1,5 +1,5 @@
 import { useAppDispatch } from "@/app/appStore"
-import { setHistory } from "@/entities/history/model/historySlice"
+import { setHistory } from "@/entities/weather/model/historySlice"
 import { WeatherApiResponse } from "@/entities/weather/model/types"
 import { useEffect } from "react"
 import getCurrentDate from "../helpers/getCurrentDate"

@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 import type { PayloadAction } from "@reduxjs/toolkit";
-import { IHistory } from "./types"
+import { IHistory } from "../../history/model/types"
 
 export interface State {
   history: IHistory[] | []

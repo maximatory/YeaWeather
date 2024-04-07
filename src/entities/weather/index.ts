@@ -1,3 +1,4 @@
-import FavoriteCity from "./ui/favoriteCity/FavoriteCity";
+import FavoriteCity from "./ui/FavoriteCity/FavoriteCity";
+import HistoryItem from "./ui/HistoryItem/HistoryItem";
 
-export {FavoriteCity}
+export { FavoriteCity, HistoryItem }
