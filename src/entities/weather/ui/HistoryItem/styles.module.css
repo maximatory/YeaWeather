@@ -34,6 +34,6 @@
 
 @media (max-width: 600px){
     .wrapper {
-        justify-content: center;
+        justify-content: start;
     }
 }
