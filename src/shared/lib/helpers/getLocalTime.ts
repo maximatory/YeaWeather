@@ -1,6 +1,6 @@
-export type TimezoneType = number
+export type TimezoneType = number | undefined
 
-export const getLocalTime = (timezone:number | TimezoneType) => {
+export const getLocalTime = (timezone:TimezoneType) => {
     if(timezone){
         const date = new Date()
         const localTime = date.getTime()
@@ -11,5 +11,5 @@ export const getLocalTime = (timezone:number | TimezoneType) => {
         const result = new Date(city)
         return result.toLocaleTimeString().slice(0, -3)
     }
-    return
+    return 'No date'
 }

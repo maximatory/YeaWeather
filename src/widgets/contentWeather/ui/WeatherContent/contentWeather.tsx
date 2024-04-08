@@ -1,4 +1,3 @@
-import useLocalTime from '@/shared/lib/hooks/useLocalTime';
 import { checkDayOrNight } from '@/shared/lib/helpers/checkDayOrNight';
 import { getWeatherConditionByCode } from '@/shared/lib/helpers/getWeatherConditionByCode';
 import { WeatherCard, WeatherDetails } from '@/entities/weather';
@@ -6,11 +5,12 @@ import { useParams } from 'react-router-dom';
 import { useGetWeatherQuery } from '@/entities/weather/api/weatherApi';
 
 import styles from './styles.module.css'
+import { getLocalTime } from '@/shared/lib/helpers/getLocalTime';
 
 export default function ContentWeather() {
   const {location} = useParams()
   const { data, isError } = useGetWeatherQuery(location || "Москва")
-  const localTime = useLocalTime(data?.timezone)
+  const localTime = getLocalTime(data?.timezone)
   const timeOfDay = checkDayOrNight(localTime)
   const weatherCondition = getWeatherConditionByCode(data?.weather[0].id)
   const imageName = `${weatherCondition}_${timeOfDay}`
