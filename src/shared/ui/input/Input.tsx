@@ -5,7 +5,7 @@ import styles from './styles.module.css'
 export default function Input({handleChange, value, placeholder}: InputProps) {
   return (
     <input 
-      onChange={(e)=> handleChange(e.target.value)}
+      onChange={(event) => handleChange(event)}
       type="text" className={styles.input} 
       placeholder={placeholder}
       value={value}

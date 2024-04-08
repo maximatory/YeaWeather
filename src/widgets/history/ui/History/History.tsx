@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 import { useAppSelector } from '@/app/appStore'
 import HistoryList from '../HistoryList/HistoryList'
 import Filter from '@/features/filter/ui/Filter'
@@ -10,9 +10,9 @@ export default function History() {
     const { history } = useAppSelector(state => state.history)
     const [filteredHistory, setFilteredHistory] = useState(history)
 
-    const filterHistory = (inputValue:string) => {
-        if(!inputValue) return setFilteredHistory(history)
-        const filteredItems = history.filter((historyItem)=> historyItem.location.toLowerCase().includes(inputValue.toLowerCase()))
+    const filterHistory = (event:ChangeEvent<HTMLInputElement>) => {
+        if(!event.target.value) return setFilteredHistory(history)
+        const filteredItems = history.filter((historyItem)=> historyItem.location.toLowerCase().includes(event.target.value.toLowerCase()))
         setFilteredHistory(filteredItems)
     }
     

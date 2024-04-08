@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { ChangeEvent, useState } from 'react'
 import Input from '@/shared/ui/input/Input'
 import styles from './styles.module.css'
 
@@ -8,7 +8,7 @@ interface SearchProps {
 
 export default function Search({handleSearch}:SearchProps) {
 const [inputValue, setInputValue] = useState('')
-const handleChange = (val:string)=> setInputValue(val)
+const handleChange = (event:ChangeEvent<HTMLInputElement>)=> setInputValue(event.target.value)
 
 const fetchWeather = (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()

@@ -1,8 +1,9 @@
 import Input from '@/shared/ui/input/Input'
 import styles from "./styles.module.css"
+import { ChangeEventHandler } from 'react'
 
 interface FilterProps {
-    handleFilter: (search: string) => void
+    handleFilter: ChangeEventHandler<HTMLInputElement>
 }
 
 export default function Filter({ handleFilter }: FilterProps) {

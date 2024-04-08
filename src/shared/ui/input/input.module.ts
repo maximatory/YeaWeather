@@ -1,5 +1,7 @@
+import { ChangeEventHandler } from "react";
+
 export interface InputProps {
-    handleChange: (event: string)=> void,
+    handleChange: ChangeEventHandler<HTMLInputElement>,
     value?: string,
     placeholder: string
 }
