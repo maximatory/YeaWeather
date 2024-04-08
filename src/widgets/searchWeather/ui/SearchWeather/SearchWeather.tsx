@@ -1,9 +1,9 @@
 import { useGetWeatherQuery } from '@/entities/weather/api/weatherApi'
-import { Search } from '@/features/search'
+import { Search } from '@/features/weather/searchByCity'
 import { useNavigate, useParams } from 'react-router-dom';
 import useHistory from '@/shared/lib/hooks/useHistory';
 import styles from './styles.module.css'
-import LinkButton from '@/features/search/ui/LinkButton/LinkButton';
+import LinkButton from '@/features/weather/searchByCity/ui/LinkButton/LinkButton';
 
 export default function SearchWeather() {
     const {location} = useParams()

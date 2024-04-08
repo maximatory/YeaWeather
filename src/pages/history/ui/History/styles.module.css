@@ -1,9 +1,3 @@
-.filter_wrapper {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
 .history_content {
     background-color: var(--gray-800);
     border-radius: 12px;
@@ -14,10 +8,4 @@
     margin-bottom: 20px;
     font-size: var(--heading-sm);
     color: var(--gray-100);
-}
-
-@media (max-width: 600px) {
-    .filter_wrapper {
-        flex-direction:column-reverse;
-    }
 }
