@@ -1,4 +1,3 @@
-import { MainPage } from '@/pages/main'
 import { Outlet } from 'react-router-dom'
 
 export default function BaseLayout() {

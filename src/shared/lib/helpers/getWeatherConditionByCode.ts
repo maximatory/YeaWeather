@@ -1,4 +1,7 @@
-export const getWeatherConditionByCode = (code: number) => {
+export const getWeatherConditionByCode = (code?: number) => {
+    if(code === undefined){
+        return 'clear'
+    }
     switch (code) {
         case 200: return 'storm'
             

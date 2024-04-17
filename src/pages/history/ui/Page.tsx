@@ -1,10 +1,9 @@
-import { History } from "@/widgets/history";
-
+import History from './History/History'
 
 export default function HistoryPage() {
   return (
-    <div>
+    <main>
       <History/>
-    </div>
+    </main>
   )
 }

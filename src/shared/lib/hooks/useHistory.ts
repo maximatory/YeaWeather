@@ -1,15 +1,14 @@
 import { useAppDispatch } from "@/app/appStore"
-import { setHistory } from "@/entities/history/model/historySlice"
+import { setHistory } from "@/entities/weather/model/historySlice"
 import { WeatherApiResponse } from "@/entities/weather/model/types"
 import { useEffect } from "react"
 import getCurrentDate from "../helpers/getCurrentDate"
 
 export interface UseHistoryProps {
     data: WeatherApiResponse | undefined
-    search: string
 }
 
-export default function useHistory({ data, search }:UseHistoryProps) {
+export default function useHistory({ data }:UseHistoryProps) {
     const dispatch = useAppDispatch()
     
     useEffect(() => {

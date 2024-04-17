@@ -1,0 +1,14 @@
+.wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}

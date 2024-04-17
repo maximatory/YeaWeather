@@ -1,43 +1,23 @@
 import { useGetWeatherQuery } from '@/entities/weather/api/weatherApi'
-
-import { Search } from '@/features/search'
-import WeatherDetails from '../WeatherDatails/WeatherDetails';
-import WetaherCard from '../WeatherCard/WetaherCard';
-import Button from '@/shared/ui/button/Button';
-import { Link } from 'react-router-dom';
-
-import styles from './styles.module.css'
+import { Search } from '@/features/weather/searchByCity'
+import { useNavigate, useParams } from 'react-router-dom';
 import useHistory from '@/shared/lib/hooks/useHistory';
-import { useAppDispatch, useAppSelector } from '@/app/appStore';
-import { setSearch } from '@/entities/search/model/searchSlice';
-
-
+import styles from './styles.module.css'
+import LinkButton from '@/features/weather/searchByCity/ui/LinkButton/LinkButton';
 
 export default function SearchWeather() {
-    const { search } = useAppSelector(state => state.search)
-    const dispatch = useAppDispatch()
-    const handleSearch = (value: string) => dispatch(setSearch(value))
-    const { data, isError } = useGetWeatherQuery(search)
-    useHistory({ data, search })
+    const {location} = useParams()
+    const navigate = useNavigate()
+    const handleSearch = (value: string) => navigate(`/${value}`)
+    const { data } = useGetWeatherQuery(location || "Москва")
+    useHistory({ data })
 
     return (
         <div className={styles.wrapper}>
             <div className={styles.search}>
                 <Search handleSearch={handleSearch} />
-                <Link to={"/history"}>
-                    <Button label='История поиска' />
-                </Link>
+                <LinkButton label='История поиска' link='history'/>
             </div>
-            {
-                isError && 
-                <div>Пожалуйста введите корректный город</div>
-            }
-            {data &&
-                <div className={styles.weather_container}>
-                    <WetaherCard data={data} />
-                    <WeatherDetails data={data} />
-                </div>
-            }
         </div>
     )
 }
