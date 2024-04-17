@@ -1,5 +1,6 @@
 import { ContentWeather } from '@/widgets/contentWeather'
-import { FavoriteCities } from '@/widgets/favoriteCities'
+import { FavoriteCitiesList } from '@/widgets/favoriteCities'
+
 import { SearchWeather } from '@/widgets/searchWeather'
 
 export default function MainPage() {
@@ -7,7 +8,7 @@ export default function MainPage() {
     <main>
       <SearchWeather/>
       <ContentWeather/>
-      <FavoriteCities/>
+      <FavoriteCitiesList/>
     </main>
   )
 }
