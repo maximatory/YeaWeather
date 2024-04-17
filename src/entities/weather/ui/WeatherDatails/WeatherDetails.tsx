@@ -1,3 +1,4 @@
+import { detailIcons } from '@/shared/assets'
 import { WeatherApiResponse } from '../../model/types'
 import styles from './styles.module.css'
 
@@ -14,7 +15,7 @@ export default function WeatherDetails({data}:WetaherDetailsProps) {
         <div className={styles.details_list}>
             <div className={styles.details_item}>
                 <div className={styles.description}>
-                    <img className={styles.icon} src="src/shared/assets/icons/detailIcons/feels_like.svg" alt="feels like icon" />
+                    <img className={styles.icon} src={detailIcons.feels_like} alt="feels like icon" />
                     <span className={styles.description_item}>Ощущается как</span>
                 </div>
                 <span className={styles.value}>{Math.floor(data.main.feels_like)} °C</span>
@@ -24,7 +25,7 @@ export default function WeatherDetails({data}:WetaherDetailsProps) {
         <div className={styles.details_list}>
             <div className={styles.details_item}>
                 <div className={styles.description}>
-                    <img className={styles.icon} src="src/shared/assets/icons/detailIcons/pressure.svg" alt="feels like icon" />
+                    <img className={styles.icon} src={detailIcons.pressure} alt="pressure icon" />
                     <span className={styles.description_item}>Атмосферное давление</span>
                 </div>
                 <span className={styles.value}>{Math.floor(data.main.pressure)} гПа</span>
@@ -34,7 +35,7 @@ export default function WeatherDetails({data}:WetaherDetailsProps) {
         <div className={styles.details_list}>
             <div className={styles.details_item}>
                 <div className={styles.description}>
-                    <img className={styles.icon} src="src/shared/assets/icons/detailIcons/wind.svg" alt="feels like icon" />
+                    <img className={styles.icon} src={detailIcons.wind} alt="wind icon" />
                     <span className={styles.description_item}>Скорость ветра</span>
                 </div>
                 <span className={styles.value}>{Math.floor(data.wind.speed)} км/ч</span>
@@ -44,7 +45,7 @@ export default function WeatherDetails({data}:WetaherDetailsProps) {
         <div className={styles.details_list}>
             <div className={styles.details_item}>
                 <div className={styles.description}>
-                    <img className={styles.icon} src="src/shared/assets/icons/detailIcons/humidity.svg" alt="feels like icon" />
+                    <img className={styles.icon} src={detailIcons.humidity} alt="humidity icon" />
                     <span className={styles.description_item}>Влажность воздуха</span>
                 </div>
                 <span className={styles.value}>{Math.floor(data.main.humidity)} %</span>
@@ -54,7 +55,7 @@ export default function WeatherDetails({data}:WetaherDetailsProps) {
         <div className={styles.details_list}>
             <div className={styles.details_item}>
                 <div className={styles.description}>
-                    <img className={styles.icon} src="src/shared/assets/icons/detailIcons/clouds.svg" alt="feels like icon" />
+                    <img className={styles.icon} src={detailIcons.clouds} alt="clouds icon" />
                     <span className={styles.description_item}>Облачность</span>
                 </div>
                 <span className={styles.value}>{Math.floor(data.clouds.all)} %</span>

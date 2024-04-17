@@ -6,6 +6,7 @@ import { useGetWeatherQuery } from '@/entities/weather/api/weatherApi';
 
 import styles from './styles.module.css'
 import { getLocalTime } from '@/shared/lib/helpers/getLocalTime';
+import { weatherIconsType } from '@/shared/assets';
 
 export default function ContentWeather() {
   const {location} = useParams()
@@ -13,7 +14,7 @@ export default function ContentWeather() {
   const localTime = getLocalTime(data?.timezone)
   const timeOfDay = checkDayOrNight(localTime)
   const weatherCondition = getWeatherConditionByCode(data?.weather[0].id)
-  const imageName = `${weatherCondition}_${timeOfDay}`
+  const imageName:weatherIconsType = `${weatherCondition}_${timeOfDay}`
   
   if(isError){
     return <div>Пожалуйста введите корректный город</div>
