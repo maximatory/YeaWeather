@@ -1,7 +1,7 @@
 import { useAppSelector } from '@/app/appStore'
 import { FilterHistory } from '@/widgets/filterHistory'
 import HistoryList from '@/widgets/historyList/ui/HistoryList/HistoryList'
-import React, { ChangeEvent, useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 import styles from './styles.module.css'
 
 export default function History() {

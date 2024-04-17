@@ -1,4 +1,3 @@
-import React from 'react'
 import { IHistory } from '../../model/types'
 import styles from './styles.module.css'
 

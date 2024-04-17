@@ -1,4 +1,3 @@
-import React from 'react'
 import { InputProps } from './input.module'
 import styles from './styles.module.css'
 
