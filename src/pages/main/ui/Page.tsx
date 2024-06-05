@@ -1,5 +1,6 @@
+import { FavoriteCitiesList } from '@/widgets/FavoriteCities'
 import { ContentWeather } from '@/widgets/contentWeather'
-import { FavoriteCitiesList } from '@/widgets/favoriteCities'
+
 
 import { SearchWeather } from '@/widgets/searchWeather'
 
